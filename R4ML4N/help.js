@@ -1,26 +1,23 @@
-const help = (prefix) => {
-	return `🔰---[ *MENU ARR157-BOT* ]---🔰
+
+  const help = (prefix) => {
+	return `🔥---[ *MENU TOBI-BOT* ]---🔥
 ┏━━━━━━━━━━━━━━━━━━━━┓
-┃ *⚠️ NAO SPAM! NAO CALL!!! ⚠️*
-┃   *caso aocontrario  BLOCK*
+┃
+┃ *【BOT LISTA DE COMANDOS】*
+┃   
 ┣━━━━━━━━━━━━━━━━━━━━┛
-┃⊱❥ PROPRIETÁRIO : *BRUXINHO*
-┃⊱❥ ATIVO : *08:00-22:00 WIB*
+┃⊱❥ PROPRIETÁRIO : *TOBI*
 ┃⊱❥ PREFIX : 「 ${prefix} 」
 ┃⊱❥ VERSÃO : 1.1
-┃⊱❥ número do meu criador:wa.me/+27624213430
-┃⊱❥ Da uma FORÇA la no meu canal fml:https://youtube.com/channel/UCalQOjX5BFqim6x8JyCMM-w
-┃⊱❥ LINK do meu GRUPO: https://chat.whatsapp.com/FvPEpkaPrFXAErjML3ekyW
-┃⊱❥ *SE FOR KIBAR DEIXA OS CRÉDITOS MAN*
 ┣━━━━━━━━━━━━━━━━━━━━┛
-┃ 🌀𝑻𝒆𝒏𝒕𝒂𝒏𝒈 𝑩𝑶𝑻🌀
+┃ 🔥𝑻𝒆𝒏𝒕𝒂𝒏𝒈 𝑩𝑶𝑻🔥
 ┣━━━━━━━━━━━━━━━━━━━━┓
 ┃➢ ${prefix}info
 ┃➢ ${prefix}owner
 ┃➢ ${prefix}donasi
 ┃➢ ${prefix}blocklist
 ┣━━━━━━━━━━━━━━━━━━━━┛
-┃ 🌀𝑴𝒆𝒏𝒖 𝑺𝑰𝑴𝑷𝑳𝑬S🌀
+┃ 🔥𝑴𝒆𝒏𝒖 𝑺𝑰𝑴𝑷𝑳𝑬S🔥
 ┣━━━━━━━━━━━━━━━━━━━━┓
 ┃➢ ${prefix}sticker
 ┃➢ ${prefix}toimg
@@ -29,13 +26,13 @@ const help = (prefix) => {
 ┃➢ ${prefix}nulis
 ┃➢ ${prefix}quotes
 ┣━━━━━━━━━━━━━━━━━━━━┛
-┃ 🌀𝑴𝒆𝒏𝒖 𝑫𝑶𝑾𝑵𝑳𝑶𝑨𝑫🌀
+┃ 🔥𝑴𝒆𝒏𝒖 𝑫𝑶𝑾𝑵𝑳𝑶𝑨𝑫🔥
 ┣━━━━━━━━━━━━━━━━━━━━┓
 ┃➢ ${prefix}tiktod
 ┃➢ ${prefix}ytmp3
 ┣━━━━━━━━━━━━━━━━━━━━┛
 ┣━━━━━━━━━━━━━━━━━━━━┛
-┃ 🌀𝑴𝒆𝒏𝒖 𝑮𝑨𝑩𝑼𝑻𝒁🌀
+┃ 🔥𝑴𝒆𝒏𝒖 𝑮𝑨𝑩𝑼𝑻𝒁🔥
 ┣━━━━━━━━━━━━━━━━━━━━┓
 ┃➢ ${prefix}apakah
 ┃➢ ${prefix}kapankah
@@ -47,12 +44,12 @@ const help = (prefix) => {
 ┃➢ ${prefix}dare
 ┣━━━━━━━━━━━━━━━━━━━━┛
 ┣━━━━━━━━━━━━━━━━━━━━┛
-┃ 🌀𝑴𝒆𝒏𝒖 𝑴𝑬𝑴𝑬🌀
+┃ 🔥𝑴𝒆𝒏𝒖 𝑴𝑬𝑴𝑬🔥
 ┣━━━━━━━━━━━━━━━━━━━━┓
 ┃➢ ${prefix}meme
 ┃➢ ${prefix}memeindo
 ┣━━━━━━━━━━━━━━━━━━━━┛
-┃ 🌀𝑴𝒆𝒏𝒖 𝑮𝑹𝑶𝑼𝑷🌀
+┃ 🔥𝑴𝒆𝒏𝒖 𝑮𝑹𝑶𝑼𝑷🔥
 ┣━━━━━━━━━━━━━━━━━━━━┓
 ┃➢ ${prefix}admin
 ┃➢ ${prefix}welcome [1/0]
@@ -68,7 +65,7 @@ const help = (prefix) => {
 ┃➢ ${prefix}hidetag
 ┃➢ ${prefix}simih [1/0]
 ┣━━━━━━━━━━━━━━━━━━━━┛
-┃ 🌀𝑴𝒆𝒏𝒖 𝑪𝑶𝑴𝑳𝑰🌀 ✖[ERRO]✖
+┃ 🔥𝑴𝒆𝒏𝒖 𝑪𝑶𝑴𝑳𝑰🔥 ✖[ERRO]✖
 ┣━━━━━━━━━━━━━━━━━━━━┓
 ┃➢ ${prefix}randomhentong
 ┃➢ ${prefix}randomloli
@@ -77,7 +74,7 @@ const help = (prefix) => {
 ┃➢ ${prefix}nsfwtrap
 ┣━━━━━━━━━━━━━━━━━━━━┛
 ┣━━━━━━━━━━━━━━━━━━━━┛
-┃ 🌀𝑴𝒆𝒏𝒖 𝑶𝑻𝑯𝑬𝑹🌀
+┃ 🔥𝑴𝒆𝒏𝒖 𝑶𝑻𝑯𝑬𝑹🔥
 ┣━━━━━━━━━━━━━━━━━━━━┓
 ┃➢ ${prefix}ssweb
 ┃➢ ${prefix}simi
@@ -88,7 +85,7 @@ const help = (prefix) => {
 ┃➢ ${prefix}ytstalk
 ┣━━━━━━━━━━━━━━━━━━━━┛
 ┣━━━━━━━━━━━━━━━━━━━━┛
-┃ 🌀𝑴𝒆𝒏𝒖 𝑴𝑨𝑲𝑬𝑹🌀
+┃ 🔥𝑴𝒆𝒏𝒖 𝑴𝑨𝑲𝑬𝑹🔥
 ┣━━━━━━━━━━━━━━━━━━━━┓
 ┃➢ ${prefix}hartatahta
 ┃➢ ${prefix}pornhub
@@ -101,25 +98,31 @@ const help = (prefix) => {
 ┃➢ ${prefix}lovetext
 ┃➢ ${prefix}gugeltext
 ┣━━━━━━━━━━━━━━━━━━━━┛
-┃ 🌀𝑴𝒆𝒏𝒖 𝑶𝑾𝑵𝑬𝑹🌀
+┃ 🔥𝑴𝒆𝒏𝒖 𝑶𝑾𝑵𝑬𝑹🔥
 ┣━━━━━━━━━━━━━━━━━━━━┓
 ┃➢ ${prefix}setprefix
 ┃➢ ${prefix}bc
 ┃➢ ${prefix}clearall
 ┃➢ ${prefix}clone
 ┣━━━━━━━━━━━━━━━━━━━━┛
-┃⟪ CRIADO POR BY *BRUXINHO MODS* ⟫
+┃⟪ CRIADO POR *TOBI OF HYPE* ⟫
+┃➢NÚMERO DO MEU CRIADOR:
+┃➢ wa.me/+5531984159437
 ┣━━━━━━━━━━━━━━━━━━━━┓
-
-             ╲    ╱    ● ᏴϴͲ●ᎷᎬΝႮ●
-       ╱▔▔▔▔▔╲       Autor    : ARR157 BOT
-      ┃┈▇┈┈▇┈┃      
-╭╮┣━━━━━━┫╭╮    
-┃┃┃┈┈┈┈┈┈┃┃┃    
-╰╯┃┈┈┈┈┈┈┃╰╯
-      ╰┓┏━━┓┏╯
-         ╰╯      ╰╯
+┃
+╰╼❥  *Nosso Grupo*
+╭╊━━╾┈❋┈╼━━╉╮
+https://chat.whatsapp.com/KCV4iZ2TrRm1D0whPyCmrv
+╰╊━━╾┈❋┈╼━━╉╯
+┃
+╰╼❥ *Dúvidas | wa.me/5531984159437*
+┃
+╰╼❥ *ᵃᵈᵐৡৢ͜͡Ŧ͢❍ƁƗ͢..BØT by Tropa da Mafia*
+       
 `
 }
 
 exports.help = help
+
+
+
