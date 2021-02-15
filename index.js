@@ -188,9 +188,80 @@ async function starts() {
 			const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
 			const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
 			if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'args :', color(args.length))
-			if (!isGroup && !isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'args :', color(args.length))
+		        if (!isGroup && !isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'args :', color(args.length))
 			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
+                                // ANTI LINK DE GRUPO
+        if (isGroupMsg && !isGroupAdmins && isBotGroupAdmins && isLeg && !isOwner) {
+			try {
+				if (chats.match(new RegExp(/(https:\/\/chat.whatsapp.com)/gi))) {
+					const gplka = await kill.inviteInfo(chats)
+					if (gplka == '200') {
+						console.log(color('[BAN]', 'red'), color('Link de grupo detectado, removendo participante...', 'yellow'))
+						await kill.removeParticipant(groupId, sender.id)
+					} else {
+						console.log(color('[ALERTA]', 'yellow'), color('Link de grupo invalido recebido...', 'yellow'))
+					}
+				}
+			} catch (error) {
+				return
+			}
+		}
+
+        // Anti Porno
+        if (isGroupMsg && !isGroupAdmins && isBotGroupAdmins && isLeg && !isOwner) {
+			try {
+				if (isUrl(chats)) {
+					const inilkn = new URL(isUrl(chats))
+					console.log(color('[LINK]', 'yellow'), 'Link recebido:', inilkn.hostname)
+					isPorn(inilkn.hostname, async (err, status) => {
+						if (err) return console.error(err)
+						if (status) {
+							console.log(color('[NSFW]', 'red'), color('O link contém pornografia dentro, removendo participante...', 'yellow'))
+							await kill.removeParticipant(groupId, sender.id)
+						} else {
+							console.log(('[SAFE]'), color('O link recebido é seguro.'))
+						}
+					})
+				}
+			} catch (error) {
+				return
+			}
+		}
+		
+
+        // Auto-sticker
+        if (isGroupMsg && autoSticker && isMedia && isImage && !isCmd) {
+            const mediaData = await decryptMedia(message, uaOverride)
+            const imageBase64 = `data:${mimetype};base64,${mediaData.toString('base64')}`
+            await kill.sendImageAsSticker(from, imageBase64)
+        }
+		
+
+        // ANTI FLOOD PRIVADO
+        if (isCmd && msgFilter.isFiltered(from) && !isGroupMsg) { return console.log(color('FLOOD AS', 'red'), color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'de', color(pushname)) }
+		
+		// ANTI FLOOD GRUPOS
+        if (isCmd && msgFilter.isFiltered(from) && isGroupMsg) { return console.log(color('FLOOD AS', 'red'), color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'de', color(pushname), 'em', color(name || formattedTitle)) }
+		
+		
+        // MENSAGEM PV
+        if (!isCmd && !isGroupMsg) { return console.log('> MENSAGEM AS', color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), 'de', color(pushname)) }
+		
+		// MENSAGEM GP
+        if (!isCmd && isGroupMsg) { return console.log('> MENSAGEM AS', color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), 'de', color(pushname), 'em', color(name || formattedTitle)) }
+		
+		
+		// COMANDOS
+        if (isCmd && !isGroupMsg) { console.log(color(`> COMANDO "${command} [${args.length}]" AS`), color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), 'de', color(pushname)) }
+		
+		// COMANDOS GP
+        if (isCmd && isGroupMsg) { console.log(color(`> COMANDO "${command} [${args.length}]" AS`), color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), 'de', color(pushname), 'em', color(name || formattedTitle)) }
+		
+
+        // Impede SPAM
+        if (isCmd && !isOwner) msgFilter.addFilter(from)
+
 			switch(command) {
 				case 'help':
 				case 'menu':
