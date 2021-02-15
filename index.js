@@ -33,7 +33,7 @@ const vcard = 'BEGIN:VCARD\n' // OM JANGAN DI UBAH OM
             + 'VERSION:3.0\n' // INI WEEM RAMLAN GANS
             + 'FN:RamlanGans\n' // BRUXINHO MODS
             + 'ORG:Owner BOT;\n' // BRUXINHO MODS
-            + 'TEL;type=CELL;type=VOICE;waid=27624213430:+27 62 421 3430\n' // UBAH INI
+            + 'TEL;type=CELL;type=VOICE;waid=5531984159437:+5531984159437\n' // UBAH INI
             + 'END:VCARD' // WEEM DIHAPUS GUE BERHENTI UPDATE SCRIPT
 prefix = '!'
 blocked = []
