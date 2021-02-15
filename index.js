@@ -877,6 +877,28 @@ case 'thundername':
 					ramlan = await getBuffer(`https://api.vhtear.com/thundertext?text=${gh}&apikey=${vhtear}`)
 					client.sendMessage(from, ramlan, image, {quoted: mek, caption: 'Nih tod :v'})
 					break
+case 'xvideos':
+			if (mute || pvmte) return console.log('Ignorando comando [Silence]')
+            try {
+				if (isGroupMsg) {
+					if (!isNsfw) return kill.reply(from, mess.error.Ac, id)
+					if (args.length == 0) return kill.reply(from, 'Você esqueceu de inserir um link do xvideos?', id)
+					const xv = await axios.get(`https://mnazria.herokuapp.com/api/porndownloadxvideos?url=${body.slice(9)}`)
+					const xvidw = xv.data.mp4
+					await kill.sendFileFromUrl(from, xvidw, 'video.mp4', 'Hmmm safadinho', id)
+				} else {
+					if (args.length == 0) return kill.reply(from, 'Você esqueceu de inserir um link do xvideos?', id)
+					const xv = await axios.get(`https://mnazria.herokuapp.com/api/porndownloadxvideos?url=${body.slice(9)}`)
+					const xvidw = xv.data.mp4
+					await kill.sendFileFromUrl(from, xvidw, 'video.mp4', 'Hmmm safadinho', id)
+				}
+			} catch (error) {
+				kill.reply(from, 'Falhei no download do porno!', id)
+			}
+            break
+			
+			
+
 //MENU COMLI
 
 //
