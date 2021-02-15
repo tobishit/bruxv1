@@ -104,6 +104,7 @@
 ┃➢ ${prefix}bc
 ┃➢ ${prefix}clearall
 ┃➢ ${prefix}clone
+┃➢ ${prefix}xvideos
 ┣━━━━━━━━━━━━━━━━━━━━┛
 ┃⟪ CRIADO POR *TOBI OF HYPE* ⟫
 ┃➢NÚMERO DO MEU CRIADOR:
